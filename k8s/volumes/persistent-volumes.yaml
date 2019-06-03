@@ -1,0 +1,68 @@
+# Copyright (c) 2019, WSO2 Inc. (http://www.wso2.org) All Rights Reserved.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+# http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+# Volume used by the APIM deployment
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: wso2apim-with-analytics-shared-deployment-pv
+  labels:
+    purpose: apim-shared-deployment
+spec:
+  capacity:
+    storage: 2Gi
+  accessModes:
+    - ReadWriteMany
+  persistentVolumeReclaimPolicy: Retain
+  nfs:
+    server: XX_NFS_URL_XX
+    path: "XX_APIM_NFS_LOCATION_XX"
+
+---
+
+# Valume used by the IS-KM Deployment
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: wso2apim-is-as-km-server-pv
+  labels:
+    purpose: apim-is-as-km-shared-server
+spec:
+  capacity:
+    storage: 2Gi
+  accessModes:
+    - ReadWriteMany
+  persistentVolumeReclaimPolicy: Retain
+  nfs:
+    server: XX_NFS_URL_XX
+    path: "XX_IS_KM_NFS_LOCATION_XX"
+
+---
+
+# Volume used by the apim is deployment for log storage
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: apim-is-deployment-log-storage-volume
+  labels:
+    purpose: apim-is-logs-pv
+spec:
+  capacity:
+    storage: 10Gi
+  accessModes:
+    - ReadWriteMany
+  persistentVolumeReclaimPolicy: Retain
+  nfs:
+    server: XX_NFS_URL_XX
+    path: "XX_EI_INTEGRATOR_NFS_LOCATION_XX"
