@@ -1,2 +1,2 @@
-# banco-pichincha
-Artefacts that are developed for Banco Pichincha
+# APIM Deployment on Openshift
+Artefacts to deploy APIM on Openshift
