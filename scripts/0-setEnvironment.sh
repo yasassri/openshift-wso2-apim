@@ -30,9 +30,9 @@ export KEYSTORE_DIR_NAME="dev-env" # The directory name which contains environme
 export WSO2_PACK_LOCATION="" # The directory where WSO2 packs reside
 
 #DNS Names for the servers
-export APIM_HOST_NAME="apim.apps.test.bpichincha.com"
-export APIM_GW_HOST_NAME="gw.apps.test.bpichincha.com"
-export IS_HOST_NAME="identity.apps.test.bpichincha.com"
+export APIM_HOST_NAME="apim.wso2.com"
+export APIM_GW_HOST_NAME="gw.wso2.com"
+export IS_HOST_NAME="identity.wso2.com"
 
 #DB Details 
 #For all the DB's the same user will be used.
@@ -42,7 +42,7 @@ export DB_USER_PASSWORD="root123456"
 
 #Master admin of the WSO2 server
 export ADMIN_USER="admin"
-export ADMIN_USER_PASSWORD="bpadmin"
+export ADMIN_USER_PASSWORD="admin"
 export ADMIN_USER_PASSWORD_ENCODED="YnBhZG1pbg==" # This is the base64 encoded value of the admin password, you can use https://www.base64encode.org/ to encode.
 
 #Keystore Details
