@@ -23,7 +23,7 @@ PROJECT_NAME=$K8S_NAMESPACE
 DOCKER_REG_USERNAME="DOCKER_REG_PASSWORD"
 DOCKER_REG_EMAIL="dev@wso2.com"
 
-oc new-project $PROJECT_NAME --description="Banco Pichincha Dev Project" --display-name="Banco Pichincha Dev"
+oc new-project $PROJECT_NAME --description="Dev Project" --display-name="Dev"
 oc project $PROJECT_NAME
 
 oc create serviceaccount wso2svc-account -n $PROJECT_NAME
