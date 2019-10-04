@@ -18,7 +18,7 @@
 #
 
 # Setting the necessary environment variables
-export K8S_NAMESPACE="banco-pichincha-test"
+export K8S_NAMESPACE="wso2-test"
 
 export OS_URL=""
 export OS_USER=""
